@@ -1,0 +1,60 @@
+.grid-test {
+    padding: 3rem 0;
+    // background-color: rgba($color-gray, .2);
+    margin-top: 5em;
+}
+
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+    // color: $color-white;
+    // display: flex;
+    @include clearFix; //if float: left.
+
+    //get all without last child
+    &:not(:last-child) {
+        margin-bottom: $gutterV;
+    }
+
+    //that start with "col-" selector ^
+    //that end with "col-" selector $
+    [class^="col-"] {
+        // background: linear-gradient(to left bottom, $color-primary-dark, $color-primary-light);
+        float: left;
+        padding: 1rem 0;
+
+        &:not(:last-child) {
+            margin-right: $gutterH;
+        }
+    }
+
+    .col-1of2 {
+        //calculate
+        width: calc((100% - #{$gutterH})/2);
+    }
+
+    .col-1of3 {
+        //calculate
+        width: calc((100% - 2*#{$gutterH})/3);
+    }
+
+    .col-2of3 {
+        //calculate
+        width: calc(100% - ((100% - 2*#{$gutterH})/3) - #{$gutterH});
+    }
+
+    .col-1of4 {
+        //calculate
+        width: calc((100% - 3*#{$gutterH})/4);
+    }
+
+    .col-2of4 {
+        //calculate
+        width: calc(2*((100% - 3*#{$gutterH})/4) + #{$gutterH});
+    }
+
+    .col-3of4 {
+        //calculate
+        width: calc(3*((100% - 3*#{$gutterH})/4) + 2*#{$gutterH});
+    }
+}

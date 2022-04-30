@@ -1,0 +1,20 @@
+/* universal style */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //define 1rem will (16px x 62.5% = 10px)
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: "Lato", sans-serif;
+    color: $color-gray;
+    box-sizing: border-box;
+}
