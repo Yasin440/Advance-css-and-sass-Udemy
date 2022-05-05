@@ -3,3 +3,18 @@
     padding: 25rem 0;
     margin-top: -20vh;
 }
+
+.section-feature {
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url(../../img/nat-4.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20rem 0;
+    // clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    // transform: translateY(-20%);
+    transform: translateY(-9rem) skewY(-7deg);
+
+    //select all immediate 1st child with *, immediate all chile with >*
+    &>* {
+        transform: skewY(7deg);
+    }
+}
