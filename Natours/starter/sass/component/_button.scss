@@ -16,11 +16,7 @@
         transform: translateY(-.3rem);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
-        .animateToTop {
-            /* @keyframes Name | duration | easing-function | delay |iteration-count | direction | fill-mode | play-state */
-            animation: moveInTop .8s ease-out .75s;
-            animation-fill-mode: backwards;
-        }
+
 
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
@@ -46,7 +42,7 @@
         transition: all .4s;
     }
 
-    &-white {
+    &--white {
         background-color: $color-white;
         color: $color-gray;
 
@@ -54,6 +50,21 @@
             background-color: $color-white;
         }
     }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+}
+
+.animateToTop {
+    /* @keyframes Name | duration | easing-function | delay |iteration-count | direction | fill-mode | play-state */
+    animation: moveInTop .8s ease-out .75s;
+    animation-fill-mode: backwards;
 }
 
 .btn-text {

@@ -307,14 +307,6 @@ body {
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
-.btn:hover .animateToTop {
-  /* @keyframes Name | duration | easing-function | delay |iteration-count | direction | fill-mode | play-state */
-  -webkit-animation: moveInTop .8s ease-out .75s;
-          animation: moveInTop .8s ease-out .75s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-}
-
 .btn:hover::after {
   -webkit-transform: scaleX(1.4) scaleY(1.6);
           transform: scaleX(1.4) scaleY(1.6);
@@ -342,13 +334,30 @@ body {
   transition: all .4s;
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
+}
+
+.btn--green {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+.btn--green::after {
+  background-color: #55c57a;
+}
+
+.animateToTop {
+  /* @keyframes Name | duration | easing-function | delay |iteration-count | direction | fill-mode | play-state */
+  -webkit-animation: moveInTop .8s ease-out .75s;
+          animation: moveInTop .8s ease-out .75s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 .btn-text:link, .btn-text:visited {
@@ -466,5 +475,11 @@ body {
 .section-feature > * {
   -webkit-transform: skewY(7deg);
           transform: skewY(7deg);
+}
+
+.section-tour {
+  background-color: #f7f7f7;
+  padding: 25rem 0 15rem 0;
+  margin-top: -19rem;
 }
 /*# sourceMappingURL=main.css.map */
