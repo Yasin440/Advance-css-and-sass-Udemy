@@ -5,6 +5,7 @@
     border-radius: 3px;
     transition: all .3s;
     box-shadow: 0 1rem 2rem rgba($color-black, .15);
+    cursor: pointer;
 
     &:hover {
         transform: translateY(-1.5rem) scale(1.05);
@@ -19,4 +20,151 @@
         background-clip: text;
         color: transparent;
     }
+}
+
+.tourCard {
+    //2 part card functionalities
+    perspective: 150rem; //rotate 3d look on parent element
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 52rem;
+
+    &-side {
+        height: 52rem;
+        transition: all .8s ease;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        backface-visibility: hidden;
+
+        &--front {
+            background-color: $color-white;
+            z-index: 1;
+        }
+
+        &--back {
+            &-1 {
+                background-image: linear-gradient(to right bottom, rgba(orange, .8), rgba(red, .8));
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, rgb(26, 190, 255), rgba(0, 4, 255, 0.851));
+            }
+
+        }
+    }
+
+    &-side--back {
+        transform: rotateY(180deg);
+        position: relative;
+    }
+
+    &:hover &-side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &-side--back {
+        transform: rotateY(0);
+    }
+
+    //card design
+    &-title {
+        text-transform: uppercase;
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 75%;
+    }
+
+    &-heading {
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+    }
+
+    &-heading--1 {
+        background-image: linear-gradient(to right bottom, rgba(orange, .8), rgba(red, .8));
+    }
+
+    &-heading--2 {
+        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    }
+
+    &-heading--3 {
+        background-image: linear-gradient(to right bottom, rgb(26, 190, 255), rgba(0, 4, 255, 0.851));
+    }
+
+    &-picture {
+        height: 23rem;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: screen;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba(orange, .8), rgba(red, .8)), url(../img/nat-4.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), url(../img/nat-6.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgb(26, 190, 255), rgba(0, 4, 255, 0.851)), url(../img/nat-7.jpg);
+        }
+    }
+
+    //back part
+
+    &-details {
+        text-align: center;
+        list-style: none;
+        font-size: 1.5rem;
+        padding: 3rem;
+        z-index: -2;
+
+        li {
+            padding: 1rem;
+        }
+
+        li:not(:last-child) {
+            border-bottom: 1px solid #eee;
+        }
+    }
+
+    .price {
+        margin-bottom: 8rem;
+        color: $color-white;
+
+        &-only {
+            text-transform: uppercase;
+            font-size: 1.4rem;
+        }
+
+        &-money {
+            font-weight: 100;
+            font-size: 6rem;
+        }
+
+        &-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 90%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+    }
+
 }
