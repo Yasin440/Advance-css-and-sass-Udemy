@@ -33,6 +33,7 @@
         height: 52rem;
         transition: all .8s ease;
         border-radius: 3px;
+        overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
         position: absolute;
         top: 0;
@@ -97,7 +98,7 @@
     }
 
     &-heading--2 {
-        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, .8), rgba($color-primary-dark, .8));
     }
 
     &-heading--3 {
