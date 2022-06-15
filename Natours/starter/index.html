@@ -15,6 +15,23 @@
 </head>
 
 <body>
+    <nav class="navigation">
+        <input class="navigation-checkbox" type="checkbox" id="navMenu">
+        <label for="navMenu" class="navigation-button">
+            <span class="navigation-button-burgerBtn">&nbsp;</span>
+        </label>
+        <div class="navigation-bg">&nbsp;</div>
+        <div class="navigation-menu">
+            <ul class="navigation-list">
+                <li class="navigation-item"><a href="#" class="navigation-link">home</a></li>
+                <li class="navigation-item"><a href="#" class="navigation-link">about us</a></li>
+                <li class="navigation-item"><a href="#" class="navigation-link">top place</a></li>
+                <li class="navigation-item"><a href="#" class="navigation-link">our policy</a></li>
+                <li class="navigation-item"><a href="#" class="navigation-link">contact us</a></li>
+                <li class="navigation-item"><a href="#" class="navigation-link">book now</a></li>
+            </ul>
+        </div>
+    </nav>
     <header class="header">
         <div class="header__logo-box">
             <img src="img/logo-white.png" alt="Logo" class="header__logo">
@@ -250,7 +267,74 @@
                 <a href="" class="btn-text">Read all reviews &rarr;</a>
             </div>
         </section>
+        <section class="section-book">
+            <div class="row">
+                <div class="booking">
+                    <div class="form-booking">
+                        <form action="#" class="form">
+                            <div class=" u-margin-bottom-md">
+                                <h2 class="heading-secondary">
+                                    start booking now
+                                </h2>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Full name" id="name" required>
+                                <label class="form-label" for="name">Full name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-input" placeholder="Email address" id="email" required>
+                                <label class="form-label" for="email">Email address</label>
+                            </div>
+                            <div class="form-group flex">
+                                <div class="form-group-radio">
+                                    <input type="radio" class="form-input-radio" id="small" name="tour">
+                                    <div class="form-input-radio-button"></div>
+                                    <label class="form-label-radio" for="small">Small tour group</label>
+                                </div>
+                                <div class="form-group-radio">
+                                    <input type="radio" class="form-input-radio" id="large" name="tour">
+                                    <div class="form-input-radio-button"></div>
+                                    <label class="form-label-radio" for="large">Large tour group</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="u-margin-top-md">
+                                    <button class="btn btn--green">next step &rarr;</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="footer-logo-box u-margin-bottom-lg">
+            <img src="img/logo-green-2x.png" alt="Footer_logo" class="footer-logo">
+        </div>
+        <div class="row">
+            <div class="col-1of2">
+                <div class="footer-nav">
+                    <ul class="footer-list">
+                        <li class="footer-item"><a href="#" class="footer-link">home</a></li>
+                        <li class="footer-item"><a href="#" class="footer-link">contact us</a></li>
+                        <li class="footer-item"><a href="#" class="footer-link">privacy</a></li>
+                        <li class="footer-item"><a href="#" class="footer-link">terms</a></li>
+                        <li class="footer-item"><a href="#" class="footer-link">policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1of2">
+                <div class="footer-copyright">
+                    &copy; Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam delectus explicabo ipsa
+                    libero? Cum doloribus rem itaque illo veritatis eligendi. Incidunt, ipsum? Laboriosam harum, esse
+                    placeat delectus accusantium rem a! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                    aut, quae aspernatur repudiandae minima officiis, consequuntur cum temporibus aliquam, sapiente
+                    voluptates velit odio eum voluptatum placeat dicta tenetur iure natus!
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- 
     <section class="grid-test">
         <div class="row">
